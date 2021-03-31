@@ -34,7 +34,7 @@ jobs:
         uses: yinxulai/actions-electron-forge@0.05
         with:
           # GitHub authentication token
-          github_token: 
+          github_token: GITHUB_TOKEN
           # Directory where NPM/Yarn commands should be run
           package_root: .
           # Optional package.json scripts name
