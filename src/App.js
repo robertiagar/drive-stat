@@ -2,21 +2,21 @@ import Drives from './Components/Drives';
 import React, { Component } from 'react';
 //const { remote } = window.require('electron');
 
-const drives =
-  [{
-    name: 'C:\\',
-    freeSpace: 394873294832,
-    totalSpace: 504873294832
-  }, {
-    name: 'D:\\',
-    freeSpace: 3928731202,
-    totalSpace: 4428731203
-  },
-  {
-    name: 'E:\\',
-    freeSpace: 938493802,
-    totalSpace: 10438493803
-  }];
+// const drives =
+//   [{
+//     name: 'C:\\',
+//     freeSpace: 394873294832,
+//     totalSpace: 504873294832
+//   }, {
+//     name: 'D:\\',
+//     freeSpace: 3928731202,
+//     totalSpace: 4428731203
+//   },
+//   {
+//     name: 'E:\\',
+//     freeSpace: 938493802,
+//     totalSpace: 10438493803
+//   }];
 
 export default class App extends Component {
   render() {
