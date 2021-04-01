@@ -3,6 +3,7 @@ const path = require("path");
 const { app, BrowserWindow, ipcMain } = require("electron");
 const isDev = require("electron-is-dev");
 const nodeDiskInfo = require('node-disk-info');
+const { FolderSummary } = require(isDev ? path.join(__dirname, 'Utils/FolderSummary.js') : path.join(__dirname, "../build/Utils/FolderSummary.js"));
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling
 if (require("electron-squirrel-startup")) {
@@ -73,4 +74,12 @@ ipcMain.on('getDriveList', (event, args) => {
         .catch(reason => {
             console.error(reason);
         });
+})
+
+ipcMain.on('getFolderSize', async (event, args) => {
+    console.log('getFolderSize');
+    const folderSummary = new FolderSummary(args);
+    const size = await folderSummary.getTotalSize();
+    event.sender.send('onFolderSize', size);
+    //console.log(folderSummary);
 })

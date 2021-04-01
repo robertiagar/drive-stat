@@ -13,5 +13,5 @@ export function getReadableFileSizeString(fileSizeInBytes) {
 
 export function percent(freeSpace, totalSpace, fixed) {
     if (totalSpace === 0) return 0;
-    return 100 - ((freeSpace * 100) / totalSpace).toFixed(fixed);
+    return ((freeSpace * 100) / totalSpace).toFixed(fixed);
 }
