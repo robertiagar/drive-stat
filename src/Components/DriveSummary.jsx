@@ -47,7 +47,7 @@ class DriveSummary extends Component {
     render() {
         return (
             <div className="flex flex-col justify-center space-y-4 shadow p-2 mt-2">
-                <div className="text-sm">Top 3 Extensions</div>
+                <div className="text-sm">Top Extensions</div>
                 <div>
                     {this.extensionsSummary.getExtensionSummary().map(item =>
                         <div key={item.extension} className="flex flex-row items-center justify-center space-x-5">
